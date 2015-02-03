@@ -1,0 +1,13 @@
+$elem->{'x'}
+Title
+OriginalTitle
+Director
+VODPlatform
+Keywords
+Actors
+Categories
+Plot
+Language
+Duration
+ImageQuality
+ParentalControl
