@@ -2,21 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <link rel="icon" href="../../favicon.ico">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="style.css" />
-        <title>Fleam</title>
+        <?php include('head.php');?>
     </head>
-
   <body>
 
     <div class="site-wrapper">
@@ -25,18 +12,7 @@
 
         <div class="cover-container">
 		
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">FLEAM</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+          <?php include('header.php');?>
 
 			<div id="slideshow" class="carousel slide" data-ride="carousel">
 
@@ -76,17 +52,9 @@
 				</a>
 			</div>
 		  
-<<<<<<< HEAD
 			<form method="post" action="resultat.php" id="search-bar-container">
-				<input id="search-bar" type="text" value="title" placeholder=" Search . . ." />
+				<input id="search-bar" type="text" name="title" placeholder=" Search . . ." />
 				<button id="send" value="Send">Send</button>
-=======
-			<div id="search-bar-container">
-				<input id="search-bar" type="text" placeholder=" Search . . ." />
-				<div>
-					<a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-search"></span></a>
-				</div>
->>>>>>> origin/master
 			</div>
 			 
           <div class="mastfoot">

@@ -5,20 +5,12 @@ function open_file()
 	return $var;
 }
 
-function recup()
-{
-		$tab = array();
-		if (isset($_POST['title']))
-			$tab[0] = $_POST['title'];
-		return $tab;
-}
-
 function rech($val)
 {
-	$obj = recup();
+	$obj = open_file();
 	foreach($obj as $elem)
 	{
-		if ($val[0] != null && $val[0] == $elem->{'Title'})
+		if ($val == null || $val == $elem->{'Title'})
 		{
 			echo $elem->{'Title'};
 			echo "<br/>";
