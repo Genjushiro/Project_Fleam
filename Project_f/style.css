@@ -138,6 +138,7 @@ body {
 	-webkit-transition: width 0.5s;
 	-moz-transition: width 0.5s;
 	transition: width 0.5s;
+	color:black;
 }
 
 #search-bar:hover, #search-bar:focus
