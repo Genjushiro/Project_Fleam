@@ -36,6 +36,7 @@ function rech($val)
 								$ok = 1;
 				}
 			}
+			aff_cast($actor);
 			if ($ok == 1)
 			{
 				echo "<div class=\"jumbotron\">";
@@ -65,4 +66,9 @@ function verif($tab, $val)
 		}
 	}
 	return false;
+}
+
+function aff_cast($cast){
+	print_r($cast);
+	
 }
