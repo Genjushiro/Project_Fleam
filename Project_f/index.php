@@ -21,26 +21,15 @@
 				<li data-target="#slideshow" data-slide-to="1"></li>
 				<li data-target="#slideshow" data-slide-to="2"></li>
 				<li data-target="#slideshow" data-slide-to="3"></li>
+				<li data-target="#slideshow" data-slide-to="4"></li>
 			  </ol>
 
+				<?php include('Carrousel.php');
+						$tab = select_img();?>
 
-			  <div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<img src="img/pikapika.PNG" alt="">
-					</div>
-
-					<div class="item">
-						<img src="img/pika.JPG" alt="">
-					</div>
-
-					<div class="item">
-						<img src="img/rondoudou.JPG" alt="">
-					</div>
-
-					<div class="item">
-						<img src="img/raichu.PNG" alt="">
-					</div>
-			  </div>
+				<div class="carousel-inner" role="listbox">
+					<?php gen_car($tab)?>
+				</div>
 
 				<a class="left carousel-control" href="#slideshow" role="button" data-slide="prev">
 					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
