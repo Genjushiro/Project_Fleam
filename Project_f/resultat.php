@@ -15,14 +15,17 @@
 		
           <?php include('header.php');?>
 
-			<div>
-			<?php 	include('test.php');
-					include('Carrousel.php');
-					select_img();
-					if (isset($_POST['title']))
-						rech($_POST['title']);
-					else
-						rech(null);?>
+		 
+		  </br></br></br></br></br></br>
+			<div class="jumbotron" style="background-color:#696969;">	
+					<?php 	include('test.php');
+						include('Carrousel.php');
+						select_img();
+						if (isset($_POST['title']))
+							rech($_POST['title']);
+						else
+							rech(null);?>
+			</div>
 		</div>
 			 
           <div class="mastfoot">
