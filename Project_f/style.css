@@ -117,6 +117,36 @@ body {
   font-weight: bold;
 }
 
+/*bar search*/
+#search-bar-container
+{
+	height: 40px;
+	width: 150px;
+	float: right;
+}
+
+#search-bar
+{
+	float: right;
+	margin-top: 3px;
+	margin-right: 8px;
+	height: 28px;
+	width: 75px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-transition: width 0.5s;
+	-moz-transition: width 0.5s;
+	transition: width 0.5s;
+}
+
+#search-bar:hover, #search-bar:focus
+{
+	width: 180px;
+	-webkit-transition: width 0.5s;
+	-moz-transition: width 0.5s;
+	transition: width 0.5s;
+}
 
 /*
  * Footer
