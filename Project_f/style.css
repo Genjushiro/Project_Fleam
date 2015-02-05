@@ -95,6 +95,11 @@ body {
   border-bottom-color: #fff;
 }
 
+input
+{
+	color:black;
+}
+
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
@@ -148,11 +153,75 @@ body {
 	-moz-transition: width 0.5s;
 	transition: width 0.5s;
 }
+/*block*/
+#div
+{
+	overflow:scroll;
+}
+.jumbotron
+{
+	overflow:scroll;
+	overflow:auto;
+	border-radius: 10px;
+	color:black;
+}
 
 /*
  * Footer
  */
 
+ footer
+{
+    bottom: 0px;
+    right: 0px;
+    position: fixed;
+    background-color: black;
+    height: 21px;
+    opacity : 0.69;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    transition: height 0.5s;
+    z-index: 50;
+}
+
+footer:hover
+{
+    height: 81px;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    transition: height 0.5s;    
+}
+
+#Up
+{
+    float: right;
+    height: 82px;
+    width: 60px;
+    background-color: #00BFFF;
+}
+
+/*START***********/
+/****COPYRIGHT****/
+#copyrights
+{
+    padding-top: 20px;
+    width: 209px;
+    padding-left: 50px;
+    float: left;
+}
+/****COPYRIGHT****/
+/*************END*/
+#partenaires
+{
+    padding-top: 20px;  
+    width: 440px;
+    padding-left: 50px;
+    float: left;
+}
 .mastfoot {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
