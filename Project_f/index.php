@@ -42,7 +42,7 @@
 			</div>
 		  
 			<form method="post" action="resultat.php" id="search-bar-container">
-				<input id="search-bar" type="text" name="title" placeholder=" Search . . ." />
+				<input id="search-bar" type="text" name="search" placeholder=" Search . . ." />
 				<button id="send" value="Send">Send</button>
 			</div>
 			 
