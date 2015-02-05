@@ -34,7 +34,12 @@
 						if (isset($actor['Actor'][0]))
 							for ($i = 0; isset($actor['Actor'][$i]); $i++)
 								if ($actor['Actor'][$i] == $val)
+								{
 									$ok = 1;
+									echo "--__BITE__--";
+									echo "<br/>";
+									echo $actor['Actor'][$i];
+								}
 						if (isset($key['Keyword'][0]))
 							for ($i = 0; isset($key['Keyword'][$i]); $i++)
 								if ($key['Keyword'][$i] == $val)
@@ -69,9 +74,14 @@
 				echo $elem->{'URL'};
 				echo "<br/>";
 			}
+			if ($val == null || $val == $elem->{'Title'})
+			{
+				echo $elem->{'VODPlatform'};
+				echo "<br/>";
+				echo $elem->{'URL'};
+				echo "<br/>";
+			}
 		}
-		aff_cast($actor);
-		print_r($actor);
 	}
 	function aff_cast($cast){
 	print_r($cast);
