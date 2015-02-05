@@ -18,7 +18,7 @@
 		$verif_tab = array();
 		foreach($obj as $elem)
 		{
-		$txt = (string) $elem->Title;
+			$txt = (string) $elem->Title;
 			if (!verif($verif_tab, $txt))
 			{
 				if ($val == null || $val == $elem->{'Title'} || $val == $elem->{'Director'})	
@@ -39,6 +39,7 @@
 							for ($i = 0; isset($key['Keyword'][$i]); $i++)
 								if ($key['Keyword'][$i] == $val)
 									$ok = 1;
+					}				
 				}
 			}
 			if (($val == null || $val == $elem->{'Title'}) && $f == 0)
@@ -69,12 +70,15 @@
 				echo "<br/>";
 			}
 		}
+		aff_cast($actor);
+		print_r($actor);
 	}
+	function aff_cast($cast){
+	print_r($cast);
+	
+}
 	if (isset($_GET['title']))
 	aff_film($_GET['title']);
 ?>
 	</body>
 </html>
-
-  
- 
