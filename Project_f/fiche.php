@@ -26,31 +26,53 @@
 				}
 			if (($val == null || $val == $elem->{'Title'}) && $f == 0)
 			{
+				echo "<div>";
 				echo "titre: ",$elem->{'Title'},"<br/>";
 				echo "titre originale: ",$elem->{'OriginalTitle'},"<br/>";
 				echo "realisateur: ",$elem->{'Director'},"<br/>";
 				echo "date de sortie:",$elem->{'PublicationDate'},"<br/>";
 				echo "duree: ",$elem->{'Duration'},"<br/>";
 				echo "Langage: ",$elem->{'Language'},"<br/>";
-				echo "Qualite d'image: ",$elem->{'ImageQuality'},"<br/><br/>";
-				echo "synopsis: ",$elem->{'Plot'},"<br/><br/>";
+				echo "Qualite d'image: ",$elem->{'ImageQuality'},"<br/>";
 				echo "audience: ",$elem->{'ParentalControl'},"<br/><br/>";
+				echo "</div>";
+				echo "<div>";
+				echo "synopsis: ",$elem->{'Plot'},"<br/><br/>";
+				echo "</div>";
+				echo "<div>";
 				echo "casting:","<br/>";
-				for ($i = 0; isset($actor['Actor'][$i]); $i++)
-					echo $actor['Actor'][$i] , "<br/>";
+				if (is_string($actor['Actor']))
+					echo $actor['Actor'] , "<br/>";
+				else
+					for ($i = 0; isset($actor['Actor'][$i]); $i++)
+						echo $actor['Actor'][$i] , "<br/>";
+				echo "</div>";
+				echo "<div>";
 				echo "<br/>" , "mot cle:" , "<br/>";
-				for ($i = 0; isset($key['Keyword'][$i]); $i++)
-					echo $key['Keyword'][$i] , "<br/>";
-				echo "Categories: ";
-				for ($i = 0; isset($cat['Category'][$i]); $i++)
-					echo $cat['Category'][$i] , "<br/>";
+				if (is_string($key['Keyword']))
+					echo $key['Keyword'] , "<br/>";
+				else
+					for ($i = 0; isset($key['Keyword'][$i]); $i++)
+						echo $key['Keyword'][$i] , "<br/>";
+				echo "</div>";
+				echo "<div>";
+				echo "<br/>" , "Categories: " , "<br/>";
+				if (is_string($cat['Category']))
+					echo $cat['Category'] , "<br/>";
+				else
+					for ($i = 0; isset($cat['Category'][$i]); $i++)
+						echo $cat['Category'][$i] , "<br/>";
+				echo "</div>";
 				$f = 1;
+				echo "<div>";
 			}
+			
 			if ($val == null || $val == $elem->{'Title'})
 			{
-				echo "<br/>","disponible sur:","<br/>",'<a href="' . $elem->{'URL'} . '">' . $elem->{'VODPlatform'} . '</a>',"<br/>";
+				echo "<br/>","disponible sur:","<br/>",'<a href="http://' . $elem->{'URL'} . '">' . $elem->{'VODPlatform'} . '</a>',"<br/>";
 			}
 		}
+				echo "</div>";
 	}
 	if (isset($_GET['title']))
 	aff_film($_GET['title']);
