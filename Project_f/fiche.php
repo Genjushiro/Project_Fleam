@@ -24,6 +24,12 @@
 					$cat = (array) $elem->Categories; 
 					$ok = 1;
 				}
+			if (!isset($actor['Actor']))
+				$actor = "non disponible";
+			if (!isset($key['Keyword']))
+				$key = "non disponible";
+			if (!isset($cat['Category']))
+				$cat = "non disponible";
 			if (($val == null || $val == $elem->{'Title'}) && $f == 0)
 			{
 				echo "<div>";
@@ -41,7 +47,9 @@
 				echo "</div>";
 				echo "<div>";
 				echo "casting:","<br/>";
-				if (is_string($actor['Actor']))
+				if (is_string($actor))
+					echo $actor;
+				elseif (is_string($actor['Actor']))
 					echo $actor['Actor'] , "<br/>";
 				else
 					for ($i = 0; isset($actor['Actor'][$i]); $i++)
@@ -49,7 +57,9 @@
 				echo "</div>";
 				echo "<div>";
 				echo "<br/>" , "mot cle:" , "<br/>";
-				if (is_string($key['Keyword']))
+				if (is_string($key))
+					echo $key;
+				elseif (is_string($key['Keyword']))
 					echo $key['Keyword'] , "<br/>";
 				else
 					for ($i = 0; isset($key['Keyword'][$i]); $i++)
@@ -57,7 +67,9 @@
 				echo "</div>";
 				echo "<div>";
 				echo "<br/>" , "Categories: " , "<br/>";
-				if (is_string($cat['Category']))
+				if (is_string($cat))
+					echo $cat;
+				elseif (is_string($cat['Category']))
 					echo $cat['Category'] , "<br/>";
 				else
 					for ($i = 0; isset($cat['Category'][$i]); $i++)
