@@ -216,3 +216,15 @@ body {
 .navbar-fixed-top {
   border: 0;
 }
+.img{
+  width: 184px;
+  height: 184px;
+  margin: 3px;
+  border: 2px solid #CC0000;
+  border-radius: 11px;
+}
+.imgframe{
+  width: 190px;
+  height: 190px;
+
+}
