@@ -7,7 +7,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand custom-font" href="#">Fleam</a>
+			<a class="navbar-brand custom-font" href="index.php"><span class="custom-color">F</span>leam</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
