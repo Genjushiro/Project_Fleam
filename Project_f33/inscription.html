@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 	<head>
 		<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +12,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="style1.css" />
+		<link rel="stylesheet" href="sinup1.css" />
 	</head>
+
 	<body>
-	<div class="site-wrapper">
+		<div class="site-wrapper">
             <div class="site-wrapper-inner">
                 <div class="cover-container">
                      <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -48,34 +48,69 @@
                             </div>
                         </div>
                     </nav>
-					<div class="">
-                        <h1 class="cover-heading"><div class="custom-font">CONNEXION</div></h1>
-                        <p class="lead"></p>
-					</div>
-						<div class="login-container">
-							<div id="output"></div>
-								<div class="avatar"></div>
-									<div class="form-box">
-										<form action="" method="">
-											<input name="user" type="text" placeholder="username">
-												<div class="password">
-													<input type="password" id="passwordfield" placeholder="password">
-													<span class="glyphicon glyphicon-eye-open"></span>
-												</div>
-											<button class="btn btn-info btn-block login" type="submit">Login</button>
-										</form>
-									</div>
-								</div>
-			<div class="mastfoot">
-                <div class="inner">
-                   <p><div class="small"><span class="custom-color">F</span>leam&reg;</div>Design by <a href="http://fr.linkedin.com/pub/david-sargento/b0/a60/880">David Sargento</a>, <a href="http://fr.linkedin.com/pub/johnny-yoeurng/a9/748/554/fr">Johnny Yoeurng</a>, <a href="http://fr.linkedin.com/pub/kevin-faby/b1/85/a8b">Kevin Faby</a> and <a href="http://fr.linkedin.com/pub/yvane-jalet/b1/48/168/fr">Yvane Jalet</a></p>
-				</div>
+				<div class="container">
+				  <div class="row"><br/>
+					<div class="col-md-6">
+					
+						  <form class="form-horizontal" action="" method="POST">
+						  <fieldset>
+							<div id="legend">
+							  <legend class="ll">Register</legend>
+							</div>
+							<div class="control-group">
+							  <label class="control-label" for="username">Username</label>
+							  <div class="controls">
+								<input type="text" id="username" name="username" placeholder="" class="form-control input-lg">
+								<p class="help-block">Username can contain any letters or numbers, without spaces</p>
+							  </div>
+							</div>
+						 
+							<div class="control-group">
+							  <label class="control-label" for="email">E-mail</label>
+							  <div class="controls">
+								<input type="email" id="email" name="email" placeholder="" class="form-control input-lg">
+								<p class="help-block">Please provide your E-mail</p>
+							  </div>
+							</div>
+						 
+							<div class="control-group">
+							  <label class="control-label" for="password">Password</label>
+							  <div class="controls">
+								<input type="password" id="password" name="password" placeholder="" class="form-control input-lg">
+								<p class="help-block">Password should be at least 6 characters</p>
+							  </div>
+							</div>
+						 
+							<div class="control-group">
+							  <label class="control-label" for="password_confirm">Password (Confirm)</label>
+							  <div class="controls">
+								<input type="password" id="password_confirm" name="password_confirm" placeholder="" class="form-control input-lg">
+								<p class="help-block">Please confirm password</p>
+							  </div>
+							</div>
+						 
+							<div class="control-group">
+							  <!-- Button -->
+							  <div class="controls">
+								<button class="btn btn-success">Register</button>
+							  </div>
+							</div>
+						  </fieldset>
+						</form>
+					
+					</div> 
+				  </div>
+			</div>
+		<div class="mastfoot">
+            <div class="inner">
+                <p><div class="small"><span class="custom-color">F</span>leam&reg;</div>Design by <a href="http://fr.linkedin.com/pub/david-sargento/b0/a60/880">David Sargento</a>, <a href="http://fr.linkedin.com/pub/johnny-yoeurng/a9/748/554/fr">Johnny Yoeurng</a>, <a href="http://fr.linkedin.com/pub/kevin-faby/b1/85/a8b">Kevin Faby</a> and <a href="http://fr.linkedin.com/pub/yvane-jalet/b1/48/168/fr">Yvane Jalet</a></p>
             </div>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
 	</body>
 </html>
+
