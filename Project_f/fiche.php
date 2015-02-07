@@ -12,7 +12,14 @@
 			<button id="send" value="Send">Send</button>
 		</form>
 	<?php
+	include_once("allocine-api-master\PHP\allocine.class.php");
+	include_once("allocine-api-master\PHP\get.php");
+	include_once("allocine-api-master\PHP\search.php");
 	function aff_film($val){
+		$allo = req_allo($val);
+		$code = $allo[0];
+		$img = $allo[1];
+		echo '<img src="' . $img . '" height="400" width="300">';
 		$obj = open_file();
 		$f = 0;
 		foreach($obj as $elem)
@@ -42,6 +49,7 @@
 				echo "Qualite d'image: ",$elem->{'ImageQuality'},"<br/>";
 				echo "audience: ",$elem->{'ParentalControl'},"<br/><br/>";
 				echo "</div>";
+				echo trail($code),"<br><br>";
 				echo "<div>";
 				echo "synopsis: ",$elem->{'Plot'},"<br/><br/>";
 				echo "</div>";
@@ -77,11 +85,12 @@
 				echo "</div>";
 				$f = 1;
 				echo "<div>";
+				echo "<br/>","disponible sur:";
 			}
 			
 			if ($val == null || $val == $elem->{'Title'})
 			{
-				echo "<br/>","disponible sur:","<br/>",'<a href="http://' . $elem->{'URL'} . '">' . $elem->{'VODPlatform'} . '</a>',"<br/>";
+				echo "<br/>",'<a href="http://' . $elem->{'URL'} . '">' . $elem->{'VODPlatform'} . '</a>',"<br/>";
 			}
 		}
 				echo "</div>";
