@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,6 +12,11 @@
         <div class="cover-container">
 		
           <?php include('header.php');?>
+			
+			<div class="">
+                        <h1 class="cover-heading"><div class="custom-font">Fleam</div>Plate-forme de VODs en ligne</h1>
+                        <p class="lead"></p>
+            </div>
 
 			<div id="slideshow" class="carousel slide" data-ride="carousel">
 
@@ -40,22 +44,12 @@
 					<span class="sr-only">Next</span>
 				</a>
 			</div>
-		  
-			<form method="post" action="resultat.php" id="search-bar-container">
-				<input id="search-bar" type="text" name="title" placeholder=" Search . . ." />
-				<button id="send" value="Send">Send</button>
+			
+			<div class="mastfoot">
+				<div class="inner">
+					<p><div class="custom-font">Fleam&reg;</div>Design by <a href="http://fr.linkedin.com/pub/david-sargento/b0/a60/880">David Sargento</a>, <a href="http://fr.linkedin.com/pub/johnny-yoeurng/a9/748/554/fr">Johnny Yoeurng</a>, <a href="http://fr.linkedin.com/pub/kevin-faby/b1/85/a8b">Kevin Faby</a> and <a href="http://fr.linkedin.com/pub/yvane-jalet/b1/48/168/fr">Yvane Jalet</a></p>
+				</div>
 			</div>
-			 
-          <div class="mastfoot">
-            <div class="inner">
-              <p>template for <a href="#">test</a>, by <a href="#">Acid3mon , Genjushiro</a>.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>

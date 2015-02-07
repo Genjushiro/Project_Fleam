@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php include_once("head.php");?>
+		<?php include_once("head.php"); echo "<br/>";?>
+		<?php include_once("header.php");?>
 	</head>
 	<body>
 	<?php
-	include_once("header.php");
+	echo "<br/><br/>";
 	include_once("test.php");?>
+	
 		<form method="post" action="resultat.php" id="search-bar-container">
 			<input id="search-bar" type="text" name="title" placeholder=" Search . . ." />
 			<button id="send" value="Send">Send</button>
 		</form>
 	<?php
+	echo "<br/>";
 	function aff_film($val){
 		$obj = open_file();
 		$f = 0;
@@ -19,8 +22,9 @@
 		{
 			if (($val == null || $val == $elem->{'Title'}) && $f == 0)
 			{
+				echo "<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>";
 				echo $elem->{'Title'};
-				echo "<br/>";
+				echo "<br/><br/><br/><br/><br/>";
 				echo $elem->{'OriginalTitle'};
 				echo "<br/>";
 				echo $elem->{'PublicationDate'};
