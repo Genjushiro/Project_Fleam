@@ -136,7 +136,7 @@ body {
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    position: relative;
     bottom: 0;
   }
   .masthead,
