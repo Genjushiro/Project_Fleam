@@ -14,8 +14,8 @@
 					 <li><a href="#">Communauté</a></li>
                      <li><a href="#">Catalogue</a></li>
                      <li><a href="profile.html">Profil</a></li>
-                     <li><a href="#">Login</a></li>
-                     <li><a href="#">Inscription</a></li>
+                     <li><a href="connexion.html">Login</a></li>
+                     <li><a href="inscription.html">Inscription</a></li>
 			</ul>
 				<form method="post" action="resultat.php" class="navbar-form navbar-right">
 					<input type="text" class="form-control" name="title" placeholder="Search...">
