@@ -18,7 +18,7 @@
                         <p class="lead"></p>
                     </div>
                     <div class="pif span8">
-                        <h3 class="titre">Films a la une</h3>
+                        <h3 class="titre">Prochainement sur Fleam</h3>
                         <div id="slideshow" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
 				                <li data-target="#slideshow" data-slide-to="0" class="active"></li>
