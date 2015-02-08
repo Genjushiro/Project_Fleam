@@ -12,5 +12,8 @@ function trail($code)
 	$result = $allocine->get($code);
 
 	$obj = json_decode($result);
-	return $obj->movie->trailerEmbed;
+	if (isset($obj->movie->trailerEmbed))
+		return $obj->movie->trailerEmbed;
+	else
+		return "pas de trailer disponnible";
 }
