@@ -14,7 +14,7 @@
 		
           <?php include('header.php');?>
 
-		  </br></br></br></br></br>
+		  </br></br>
 			<div class="jumbotron" style="background-color:#696969;" style="overflow:auto;" style="overflow:scroll;">
 				<div class="container">
 					<?php 	include('test.php');

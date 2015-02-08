@@ -50,7 +50,7 @@ function rech($val)
 					echo '<img src="' . $img . '" height="400" width="300">';
 				}
 				else
-					echo "<br/><br/><br/>pas d'affiche disponnible<br/><br/><br/>";
+					echo "<br/><br/><br/>Pas d'affiche disponible<br/><br/><br/>";
 				echo "<form method=\"get\" action=\"fiche.php\"class=\"container\" id=\"res", $j ,"\">";
 				echo "<button class=\"btn btn-success\" name=\"title\" value=\"", $elem->Title , "\">Access</button></form>";
 				echo $elem->{'Title'};

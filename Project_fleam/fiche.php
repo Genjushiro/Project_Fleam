@@ -12,6 +12,10 @@
 	include_once("allocine-api-master\PHP\allocine.class.php");
 	include_once("allocine-api-master\PHP\get.php");
 	include_once("allocine-api-master\PHP\search.php");
+	echo '<div class="site-wrapper">';
+	echo '<div class="site-wrapper-inner">';
+	echo '<div class="cover-container">';
+
 	function aff_film($val){
 		$allo = req_allo($val);
 		if ($allo != null)
@@ -21,7 +25,7 @@
 			echo '<img src="' . $img . '" height="400" width="300">';
 		}
 		else
-			echo "<br/><br/><br/>pas d'affiche disponnible<br/><br/><br/>";
+			echo "<br/><br/><br/><p class='split none'>Pas d'affiche disponible</p><br/><br/><br/>";
 		$obj = open_file();
 		$f = 0;
 		foreach($obj as $elem)
@@ -34,32 +38,32 @@
 					$ok = 1;
 				}
 			if (!isset($actor['Actor']))
-				$actor = "non disponible";
+				$actor = "Non disponible";
 			if (!isset($key['Keyword']))
-				$key = "non disponible";
+				$key = "Non disponible";
 			if (!isset($cat['Category']))
-				$cat = "non disponible";
+				$cat = "Non disponible";
 			if (($val == null || $val == $elem->{'Title'}) && $f == 0)
 			{
-				echo "<div>";
-				echo "titre: ",$elem->{'Title'},"<br/>";
-				echo "titre originale: ",$elem->{'OriginalTitle'},"<br/>";
-				echo "realisateur: ",$elem->{'Director'},"<br/>";
-				echo "date de sortie:",$elem->{'PublicationDate'},"<br/>";
-				echo "duree: ",$elem->{'Duration'},"<br/>";
-				echo "Langage: ",$elem->{'Language'},"<br/>";
+				echo "<div class='split'>";
+				echo "Titre: ",$elem->{'Title'},"<br/>";
+				echo "Titre original: ",$elem->{'OriginalTitle'},"<br/>";
+				echo "Realisateur: ",$elem->{'Director'},"<br/>";
+				echo "Date de sortie:",$elem->{'PublicationDate'},"<br/>";
+				echo "Duree: ",$elem->{'Duration'},"<br/>";
+				echo "Langue: ",$elem->{'Language'},"<br/>";
 				echo "Qualite d'image: ",$elem->{'ImageQuality'},"<br/>";
-				echo "audience: ",$elem->{'ParentalControl'},"<br/><br/>";
+				echo "Audience: ",$elem->{'ParentalControl'},"<br/><br/>";
 				echo "</div>";
 				if ($allo != null)
 					echo trail($code),"<br><br>";
 				else
-					echo "<br/><br/>pas de trailer disponnible<br/><br/><br/><br/>";
-				echo "<div>";
-				echo "synopsis: <br/>",$elem->{'Plot'},"<br/><br/>";
+					echo "<br/><br/><p class='none split'>Pas de trailer disponible</p><br/><br/><br/><br/>";
+				echo '<div class="lead split">';
+				echo "Synopsis: <br/>",$elem->{'Plot'},"<br/><br/>";
 				echo "</div>";
 				echo "<div>";
-				echo "casting:","<br/>";
+				echo "Casting:","<br/>";
 				if (is_string($actor))
 					echo $actor;
 				elseif (is_string($actor['Actor']))
@@ -89,7 +93,7 @@
 						echo $cat['Category'][$i] , "<br/>";
 				echo "</div>";
 				$f = 1;
-				echo "<div>";
+				echo "<div class='split'>";
 				echo "<br/>","disponible sur:";
 			}
 			
@@ -110,6 +114,9 @@
 				</div>
 			</div>
 	</center>
+	</div>
+	</div>
+	</div>
 	</body>
 </html>
 
