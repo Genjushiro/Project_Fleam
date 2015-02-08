@@ -1,4 +1,7 @@
 <?php
+include_once("allocine-api-master\PHP\allocine.class.php");
+include_once("allocine-api-master\PHP\get.php");
+include_once("allocine-api-master\PHP\search.php");
 function open_file()
 {
 	$var = simplexml_load_file('20141010_ExpHadopiMetadonneesVOD.xml');
@@ -7,6 +10,7 @@ function open_file()
 
 function rech($val)
 {
+	$allo = req_allo($val);
 	$obj = open_file();	
 	$ok = 0;
 	$verif_tab = array();
@@ -14,9 +18,10 @@ function rech($val)
 	foreach($obj as $elem)
 	{
 		$txt = (string) $elem->Title;
+		$val = strtoupper($val);
 		if (!verif($verif_tab, $txt))
 		{
-			if ($val == null || $val == $elem->{'Title'} || $val == $elem->{'Director'})	
+			if ($val == null || $val == strtoupper($elem->{'Title'}) || $val == strtoupper($elem->{'Director'}))	
 				$ok = 1;
 			else
 			{
@@ -39,6 +44,13 @@ function rech($val)
 			if ($ok == 1)
 			{
 				echo "<div class=\"jumbotron\">";
+				if ($allo != null)
+				{
+					$img = $allo[1];
+					echo '<img src="' . $img . '" height="400" width="300">';
+				}
+				else
+					echo "<br/><br/><br/>pas d'affiche disponnible<br/><br/><br/>";
 				echo "<form method=\"get\" action=\"fiche.php\"class=\"container\" id=\"res", $j ,"\">";
 				echo "<button class=\"btn btn-success\" name=\"title\" value=\"", $elem->Title , "\">Access</button></form>";
 				echo $elem->{'Title'};
